@@ -37,8 +37,11 @@
   }
 }
 
-html, body, #root {
+html, body {
 
   height: 100%
   
   }
+#root {
+  display : inherit;
+}

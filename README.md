@@ -1,4 +1,4 @@
-<h3>2022 스마트콘텐츠 프로그래밍</h3>
+## 2022 스마트콘텐츠 프로그래밍
 ---
 
 #### faker.js
@@ -24,3 +24,33 @@ npm install @mui/icons-material
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 ```
+
+
+### Switch
+```
+import Switch from '@mui/material/Switch';
+```
+
+```
+<Switch
+    checked={useDarkMode}
+    onChange={handleChange}
+    color="warning"
+    inputProps = {{'aria-label':'controlled'}}
+/>
+```
+
+### 난수 생성
+```
+const getRandomIntInclusive = (min,max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max-min) + min);
+  }
+```
+- Math.random()는 0.0<=1.0 범위 사이의 수를 반환한다. 거기에 max-min을 곱해주면 0.0 <= x < 5 사이의 범위의 수가 반환된다.
+- 또 min 값을 더해주면 범위는 1<= x < 6 이다. 그럼 랜덤의 값은 1.00... ~ 5.999.. 까지 나오게 된다. 
+- 여기서 <code>floor()</code> 통해 소수점만 없애주면 1과 5사이의 난수를 리턴해주는 것이다.
+
+### Pagination 
+사용자가 요구한 요청에 따른 양이 많을 때, 한번에 다 보여주는 것이 아닌 페이지별로 나누어서 보여주는 것.
