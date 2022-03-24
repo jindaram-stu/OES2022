@@ -8,7 +8,7 @@ npm install @faker-js/faker --save-dev
 ```
 
 #### Material UI
-Material UI는 자주 사용되는 기능/디자인들을 Component/API로 제공해줘서, React 개발 시에 다양한 UI를 쉽게 만들 수 있습니다.
+Material UI는 자주 사용되는 기능/디자인들을 Component/API로 제공해줘서, React 개발 시에 다양한 UI를 쉽게 만들 수 있습니다. 
 ##### NPM
 ```
 npm install @mui/material @emotion/react @emotion/styled
@@ -17,4 +17,10 @@ npm install @mui/material @emotion/react @emotion/styled
 ##### SVG icons
 ```
 npm install @mui/icons-material
+```
+
+##### Font
+```
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 ```

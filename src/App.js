@@ -1,14 +1,32 @@
+import React, {useState, useEffect} from 'react';
+import Container from '@mui/material/Container';
 import faker from '@faker-js/faker';
 import faker_ko from '@faker-js/faker/locale/ko';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Switch from '@mui/material/Switch';
 import './App.css';
+import UserCard from './component/UserCard';
+import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box';
+
 const userDatas = [];
 
 function App() {
+
+  const [useDarkMode, setUseDarkMode] = useState(true);
+
+  const handleChange = (event) => {
+    console.log(event);
+    setUseDarkMode(useDarkMode ? false : true);
+  }
+
+  // useEffect(() => {
+
+  // })
+
+  // useEffect(() => {
+    
+  // }),[useDarkMode]);
   
   while (userDatas.length < 5) {
     userDatas.push({
@@ -19,43 +37,54 @@ function App() {
       phoneNo : faker_ko.phone.phoneNumber()
     })
   }
-  console.log(userDatas); 
-  const userCards = userDatas.map((userData, idx)=> {
-    return <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image= {userData.avatar}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {userData.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            <b>이메일 :</b> {userData.email} <br/>
-            <b>직업 :</b> {userData.jobTitle} <br/>
-            <b>전화번호 :</b> {userData.phoneNo}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    // <div key={idx}>
-    // <h4>{userData.jobTitle}</h4>
-    // <img src={userData.avatar} alt="사용자 프로필용 아바타"></img>
-    // <h5>{userData.name} </h5>
-    // {userData.email} <br/>
-    // {userData.phoneNo}
-    // </div>
-  })
 
-  console.log();
-  return (
-      <div className="App">
-        {userCards}
-      </div>
-  );
-}
+  const userCards = userDatas.map((userData, idx)=> {
+      return <Grid item xs={1} sm={2} md={4} key={idx}>
+        <UserCard userData={userData}/>
+      </Grid>
+  });
+    return (
+    <ThemeProvider theme = {createTheme({
+      palette: {
+        mode: useDarkMode ? 'dark' : 'light',
+      },
+    })
+  }>
+    <Box sx={{
+      height: '100%',
+      bgcolor : 'background.default',
+      color : 'text.primary',
+      p: 1,
+    }}>
+      <Switch 
+        checked={useDarkMode}
+        onChange={handleChange}
+        color="warning"
+        inputProps = {{'aria-label':'controlled'}}
+        />
+      <Container maxWidth="lg">
+        <Grid container spacing={{ xs:2, md:3}} columns={{xs:4, sm: 4, md:9}}>
+          {userCards}
+        </Grid>
+      </Container>
+    </Box>
+
+  </ThemeProvider>
+    )
+  }
+
+
+//     <Grid item xs={2} sm={4} md={4} key={idx}>
+//       <UserCard userData={userData} idx={idx}/>
+//     </Grid>
+   
+    
+//   })
+//   return (
+//       <div className="App">
+//         {userCards}
+//       </div>
+//   );
+// }
 
 export default App;
