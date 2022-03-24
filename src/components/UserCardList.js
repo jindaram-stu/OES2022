@@ -1,10 +1,10 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 import Pagination from '@mui/material/Pagination';
 import Grid from '@mui/material/Grid'
 import UserCard from './UserCard';
 
-import {makeUserDatas,paginate} from '../utils'
+import {paginate} from '../utils'
 
 function UserCardList(props) {
     const pageContentsCount = 9;
