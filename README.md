@@ -54,3 +54,16 @@ const getRandomIntInclusive = (min,max) => {
 
 ### Pagination 
 사용자가 요구한 요청에 따른 양이 많을 때, 한번에 다 보여주는 것이 아닌 페이지별로 나누어서 보여주는 것.
+
+### PostMan
+```
+Post Man은 개발한 API를 테스트하고, 테스트 결과를 공유하여 API 개발의 생상선을 높여주는 플랫폼입니다.
+```
+
+### axios
+```
+axios는 브라우저, Node js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리입니다.
+Ajax와 fetch 같이 웹 통신 기능을 지원하는 라이브러리 입니다.
+HTTP 요청 취소 및 요청과 같은 응답을 JSON 형태로 자동으로 변환해줍니다.
+브라우저의 호환성이 뛰어납니다.
+```
