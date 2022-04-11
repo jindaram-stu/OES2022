@@ -26,7 +26,7 @@ function App() {
   const [apiError, setApiError] = useState(null);
   const [selectedCityData, setSelectedCityData] = useState({name : "안양", lat : 37.38, lon : 126.96});
   // 이런식으로 Pagination을 하는 방식은 실무에서 적합하지 않다. 이 방식은 먼저 다량의 데이터를 불러오고 나서 거기서 쪼개서 보여주는 방식인데
-  // 실제로는 서버에서 pageNo 정보를 보내서, 그 pageNo에 해당하는 정보만 불러오는 형식이다.
+  // 실제로는 서버에서 pageNo 정보를 보내서, 그 pageNo에 해당하는 정보만 불러오는 형식이다..
 
   const handleChange = (event) => {
     console.log(event);
