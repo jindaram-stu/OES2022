@@ -38,7 +38,7 @@ function App() {
     
     
     setSelectedCityData(cityLatLon.find((city) => {
-      return city.name == cityName;
+      return city.name === cityName;
     }));    
   }
   
