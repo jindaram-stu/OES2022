@@ -1,58 +1,81 @@
-import ThunderstormIcon from "@mui/icons-material/Thunderstorm"
-import Rain from "@mui/icons-material/Umbrella"
-import Snow from "@mui/icons-material/AcUnit"
-import Clear from "@mui/icons-material/WbSunny"
-import BlurIcon from "@mui/icons-material/Grain"
+import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import UmbrellaIcon from '@mui/icons-material/Umbrella';
+import CloudIcon from '@mui/icons-material/Cloud';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import DangerousIcon from '@mui/icons-material/Dangerous';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import FilterDramaIcon from '@mui/icons-material/FilterDrama';
 
 export const cityLatLon = [
-    { 
-        name : "서울", lat : 37.53, lon : 127.02
-    },
-    { 
-        name : "안양", lat : 37.38, lon : 126.96
-    },
-    { 
-        name : "부산", lat : 35.16, lon : 129.06
-    },
-    { 
-        name : "대전", lat : 36.45, lon : 127.43
-    },
-    
-    { 
-        name : "광주", lat : 35.1798, lon : 126.8781
-    },
-    
-    { 
-        name : "울산", lat : 37.7678, lon : -3.7908
-    },
-    
-    { 
-        name : "세종", lat : 36.5040, lon : 127.2494
-    },
-
-]
+  {
+    name: '서울',
+    lat: 37.5326,
+    lon: 127.024612,
+  },
+  {
+    name: '안양',
+    lat: 37.3911,
+    lon: 126.9677,
+  },
+  {
+    name: '제주',
+    lat: 33.4405,
+    lon: 126.3998,
+  },
+  {
+    name: '부산',
+    lat: 35.1666,
+    lon: 129.0666,
+  },
+  {
+    name: '대전',
+    lat: 36.4535,
+    lon: 127.4319,
+  },
+  {
+    name: '광주',
+    lat: 35.1798,
+    lon: 126.8781,
+  },
+  {
+    name: '울산',
+    lat: 37.7678,
+    lon: 129.3114,
+  },
+  {
+    name: '세종',
+    lat: 37.3799,
+    lon: 126.8031,
+  },
+];
 
 export const weather_mapping_data = {
-    Thunderstorm : {
-        name : "폭우",
-        icon : ThunderstormIcon
-    },
-    Rain : {
-        name : "비",
-        icon : Rain
-    },
-
-    Snow : {
-        name : "눈",
-        icon : Snow
-    },
-
-    Clear : {
-        name : "맑음",
-        icon : Clear
-    },
-    Mist : {
-        title : "안개",
-        icon : BlurIcon
-    }    
-}
+  Thunderstorm: {
+    name: '폭우',
+    icon: ThunderstormIcon,
+  },
+  Drizzle: {
+    name: '이슬비',
+    icon: CloudIcon,
+  },
+  Rain: {
+    name: '비',
+    icon: UmbrellaIcon,
+  },
+  Snow: {
+    name: '눈',
+    icon: AcUnitIcon,
+  },
+  Etc: {
+    name: '기타',
+    icon: DangerousIcon,
+  },
+  Clear: {
+    name: '맑음',
+    icon: WbSunnyIcon,
+  },
+  Clouds: {
+    name: '구름',
+    icon: FilterDramaIcon,
+  },
+};
