@@ -9,6 +9,7 @@ import UserCardList from './components/UserCardList';
 import './App.css';
 import WeatherCard from './components/WeatherCard';
 import Grid from '@mui/material/Grid'
+import TopBar from './components/TopBar';
 
 const userDatas = makeUserDatas(5000);
 
@@ -44,6 +45,7 @@ function App() {
       color : 'text.primary',
       p: 1,
     }}>
+      <TopBar/>
       <Container maxWidth="lg">
       
       <Grid container spacing={{xs:2,md : 3}} columns={{xs:4,sm:4,md:12}}>
