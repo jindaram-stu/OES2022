@@ -70,5 +70,5 @@ HTTP 요청 취소 및 요청과 같은 응답을 JSON 형태로 자동으로 �
 
 ### LocalStorage
 ```
-브라우저에서 제공하는 API로써 간단한 텍스트 데이터들을 저장할 수 있습니다. 유사한 기능으로는 sessionStorage가 있는데 둘의 차이는 LocalStorage의 데이터는 직접 삭제하지 않는 이상 영구히 유지되지만, sessionStorage는 해당 페이지를 닫을 때 사라진다는 차이가 있습니다.
-```
+브라우저에서 제공하는 API로써 간단한 텍스트 데이터들을 저장할 수 있습니다. 유사한 기능으로는 sessionStorage가 있는데 둘의 차이는 LocalStorage의 데이터는 직접 삭제하지 않는 이상 영구히 유지되지만, sessionStorage는 해당 페이지를 닫을 때 사라진다는 차이가 있습니다..
+```d
